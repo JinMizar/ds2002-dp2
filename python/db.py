@@ -45,8 +45,9 @@ for (root, dirs, files) in os.walk(path):
 
 # Outputting import counts to a text file
 with open('count.txt', 'w') as count_file:
-    count_file.write(f"Successful imports: {successful_imports}\n")
-    count_file.write(f"Failed imports: {failed_imports}\n")
-    count_file.write(f"Corrupted documents: {corrupted_files}\n")
+    count_file.write(f"Records imported: {successful_imports}\n")
+    count_file.write(f"Records orphaned (complete but not imported): {failed_imports}\n")
+    count_file.write(f"Records corrupted: {corrupted_files}\n")
 
 print(f"Data import completed. {successful_imports} successful, {failed_imports} failed, {corrupted_files} corrupted.")
+
