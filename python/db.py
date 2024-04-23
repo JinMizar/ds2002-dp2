@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from pymongo import MongoClient, errors
 import os
 import json
@@ -12,7 +14,7 @@ db = client.asg2rg
 collection = db.myCollection
 
 # Path to the JSON files
-path = "data"
+path = "/workspace/ds2002-dp2/data"
 
 # Keep track of # of count imports
 successful_imports = 0
