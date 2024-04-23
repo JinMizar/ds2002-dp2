@@ -46,7 +46,7 @@ for (root, dirs, files) in os.walk(path):
             failed_imports += 1
 
 # Outputting import counts to a text file
-with open('count.txt', 'w') as count_file:
+with open('/workspace/ds2002-dp2/count.txt', 'w') as count_file:
     count_file.write(f"Records imported: {successful_imports}\n")
     count_file.write(f"Records orphaned (complete but not imported): {failed_imports}\n")
     count_file.write(f"Records corrupted: {corrupted_files}\n")
